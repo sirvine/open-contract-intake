@@ -18,7 +18,13 @@ Visit `localhost:3000` in your browser.  You should see the intake form.
 
 ## CUSTOMIZATION
 
-TBD
+### Database
+
+OCI is configured to use a SQLite database on the same machine as the server is running on.  This is easily changes, per the usual Rails database configuration options.
+
+### File Storage
+
+OCI is configured to store files on the local file system of the same machine as the server is running on.  This is easily changes, per the `paperclip` gem configuration options.
 
 ## LICENSE
 
