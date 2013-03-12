@@ -1,0 +1,13 @@
+$(document).ready(function() {
+
+  var newOption = '<option value="<%= @stakeholder.id %>"><%= @stakeholder.name %></option>';
+  $('#project_stakeholder_id').append(newOption);
+  var selectOptions = $("#project_stakeholder_id option");
+  selectOptions.sort(function(a, b) { if (a.text > b.text) { return 1; } else if (a.text < b.text) { return -1; } else { return 0 } });
+  $("#project_stakeholder_id").empty().append(selectOptions).trigger("liszt:updated");
+  setTimeout(function(){
+    $('#project_stakeholder_id').val("<%= @stakeholder.id %>").trigger("liszt:updated");
+  }, 200);
+
+
+});

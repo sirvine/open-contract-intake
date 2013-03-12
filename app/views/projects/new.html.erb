@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="span8 offset2">
+      <div class="vertical-spacer"></div>
+      <p class="lead">New Project</p>
+      <div class="vertical-spacer"></div>
+      <%= semantic_form_for @project do |f| %>
+        <%= f.inputs do %>
+          <%= f.input :documents, :as => :file, :input_html => {:multiple => "true"} %>
+          <%= f.input :stakeholders, :as => :select, :collection => Stakeholder.all.to_a, :label => "Stakeholder Names", :input_html => {"data-placeholder" => "Choose...", :multiple => true} %>
+          <%= f.input :adversaries, :as => :select, :collection => Adversary.all.to_a, :label => "Adverse Party Names", :input_html => {"data-placeholder" => "Choose...", :multiple => true} %>
+          <%= f.input :spend, :input_html => {:style => "width:220px;"} %>
+        <% end %>
+
+        <%= f.actions do %>
+          <%= f.action :submit, :as => :input, :button_html => {:class => "btn btn-primary"} %>
+        <% end %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

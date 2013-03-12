@@ -1,0 +1,255 @@
+$key-bkgnd:#EE1D31;
+$key-dark-bkgnd:#B91829;
+$key-color:#ffffff;
+
+$exterior-nav-bkgnd:#11244B;
+$interior-nav-color:#11244B;
+$interior-nav-border:#11244B;
+
+$links-idle:#1D3E81;
+$links-hover:#7399FF;
+
+$pill-active-back:#11244B;
+$pill-active-border:#11244B;
+$pill-active-color:#EEF0FF;
+$pill-idle-back:#ffffff;
+$pill-idle-border:#dadada;
+// $pill-idle-color:#1D3E81;
+$pill-hover-back:#EEF0FF;
+$pill-hover-border:#dadada;
+$pill-hover-color:#1D3E81;
+
+a, a:visited {
+  color:$links-idle;
+
+  &:hover {
+    color:$links-hover;
+    text-decoration:none;
+  }
+
+  &.brand-root {
+    color:white;
+    color:rgba(255,255,255,0.95);
+
+    &:hover {
+      color:white;
+    }
+  }
+
+  &.btn-success,
+  &.btn-info,
+  &.btn-primary,
+  &.btn-danger,
+  &.btn-inverse,
+  &.badge,
+  &.label-success,
+  &.label-warning,
+  &.label {
+    color:white;
+  }
+
+  &.reject {
+    color:#FF1D85;
+  }
+
+  &.approve {
+    color:#76C43B;
+  }
+}
+
+a.badge {
+
+  font-weight:normal;
+
+  &.badge-active {
+    background:white;
+    color:#3a3a3a;
+    border:1px solid #dadada;
+    text-shadow:none;
+  }
+
+  &.badge-snow {
+    background:#eaeaea;
+    color:#7a7a7a;
+    border:1px solid #dadada;
+    text-shadow:none;
+  }
+}
+
+#version-carousel {
+
+  .carousel-control {
+    position: absolute;
+    top: -40px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 30px;
+    color: white;
+    text-align: center;
+    background: #222;
+    border: 3px solid white;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 23px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+
+  .carousel-control.right {
+    left: auto;
+    right: 15px;
+  }
+}
+
+
+.label {
+  font-weight:normal;
+}
+
+ul.breadcrumb {
+  background:none;
+  padding:10px 0 5px 0;
+
+  @media print { display:none; }
+}
+
+hr {
+  margin:7px 0;
+}
+
+.page-header {
+  margin:3px 0 5px 0;
+}
+
+.navbar-inverse .navbar-inner {
+  background-color: $interior-nav-color;
+  background-image: none;
+  border-color: $interior-nav-border;
+
+  a, a:visited {
+    text-shadow:none;
+    color:#fafafa;
+  }
+
+  .nav > li > a, .nav > li > a:visited {
+    text-shadow:none;
+    color:#fafafa;
+  }
+
+  .nav {
+    li.dropdown > .dropdown-toggle .caret {
+      border-top-color: #fafafa;
+      border-bottom-color: #fafafa;
+    }
+  }
+
+  li.dropdown.open > .dropdown-toggle,
+  li.dropdown.active > .dropdown-toggle,
+  li.dropdown.open.active > .dropdown-toggle {
+    background:rgba(255,255,255,0.2);
+  }
+
+  .dropdown-menu li > a, .dropdown-menu li > a:visited {
+    text-shadow: none;
+    color: #3a3a3a;
+
+    &:hover {
+      background:#eaeaea;
+    }
+  }
+}
+
+ul.nav.nav-pills {
+  margin:0 0 5px 0;
+}
+
+.nav-pills > .active > a, .nav-pills > .active > a:visited {
+  color: $pill-active-color;
+  background-color: $pill-active-back;
+  border:1px solid $pill-active-border;
+
+  &:hover {
+    background-color: $pill-active-back;
+    // border:1px solid $pill-active-border;
+    color: $pill-active-color;
+  }
+}
+
+.nav-pills > li > a, .nav-pills > li > a:visited {
+  background:$pill-idle-back;
+  margin-right:10px;
+  border:1px solid $pill-idle-border;
+
+  &.flush-right {
+    margin-right:0;
+  }
+
+  &:hover {
+    background-color: $pill-hover-back;
+    color: $pill-hover-color;
+    border:1px solid $pill-hover-border;
+  }
+}
+
+.help-block {
+  font-size:0.9em;
+  line-height:1.1em;
+}
+
+.modal {
+
+  .lead {
+    margin:0;
+  }
+}
+
+.hero-title-wrap {
+  background: $exterior-nav-bkgnd;
+  color:white;
+}
+
+.lead {
+
+  &.version-lead {
+    margin:0 0 10px 0;
+  }
+}
+
+a:link:after, a:visited:after
+{
+  content: none;
+}
+
+@media print {
+  .no-print { display:none; }
+}
+
+@media screen {
+  .print-only { display:none; }
+}
+
+.tooltip-inner {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align:left;
+  white-space:pre-wrap;
+}
+
+.nav-tabs.nav-stacked > li:first-child > a {
+  webkit-border-top-right-radius: 0;
+  -moz-border-radius-topright: 0;
+  border-top-right-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-left-radius: 0;
+}
+
+.nav-tabs.nav-stacked {
+  &.white-back {
+    background:white;
+  }
+}
+
